@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %} 
+
+{% block title %}天气查询{% endblock %}
+{% block page_content %}
+
+<div class="page-header"> 
+    {% if name %}
+    <h1>{{ name }} {{weather}}{% else %}请输入地名</h1> 
+    {% endif %}
+</div> 
+{{ wtf.quick_form(form) }} 
+<hr>
+<h6>标签 : 天气</h6>
+
+{% endblock %}
